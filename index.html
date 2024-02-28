@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./SCSS/style.css"> -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="shortcut icon" href="Image/Web_Icon_off.png" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/8d688aa403.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="shortcut icon" href="Image/Cargo_LOGO.png"  type="image/x-icon">
+    <title> Cargo Management System </title>
+</head>
+<body>
+
+
+    <header>
+        <div class="Profile">
+            <a href="index.html"><img src="Image/Cargo_LOGO.png"  alt="Logo"></a>
+            <nav>
+              <ul>
+                <!-- <li><a href="index.html">HOME</a></li> -->
+                <li><a href="#Track_Home">TRACK</a></li>
+                <li><a href="Ship.html">SHIP</a></li>
+                <!-- <li><a href="index.html">CARGO OPERATIONS ▼  </a>
+                  <ul class="dropdown">
+                    <li><a href="Charges_Calc.html">Charges Calculation</a></li>
+                    <li><a href="Online_Cargo_Proc.html">Online Cargo Procedure</a></li>
+                    <li><a href="Cargo_Tariff.html">Cargo Tariff</a></li>
+                </ul>
+              </li> -->
+                <li><a href="index.html"> &nbsp; CARGO TRACKINGS ▼ </a>
+                  <ul class="dropdown">
+                    <li><a href="Export_cargo.html">Export Cargo Tracking</a></li>
+                    <li><a href="Import_cargo.html">Import Cargo Tracking</a></li>
+                </ul>
+                </li>
+                <li><a href="Contact.html">CONTACT US</a></li>
+                <li><a href="About.html">ABOUT US</a></li>
+              </ul>
+          </nav>
+          </div>
+    
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <!-- <i class="fa fa-bars"></i> -->
+          </a>
+    </header>
+
+
+<!-- Top button -->
+<button onclick="topFunction()" id="top_Btn" ><span class="material-icons" style=" font-size:24px;"> north </span> <span class="tooltiptext">Back to Top</span> </button>
+
+
+    <div class="main">
+      <p id="Track_Home"></p>
+<form action="Track_details.html">
+    <div class="Track_Con"> 
+      <h2 class="Track_Num">Track Your Shipment's  </h2>
+      <input type="text" name="Tracking_Num" id="Track_NO" size="80" placeholder="Enter Your Tracking Number's or Id's">
+      <button class="Track_Btn" onclick="TrackFunc(), TrackNumb()">  TRACK ▶ </button>
+    </div> <br> </form>
+
+
+      <div id="main_heading">
+        <h2 class="main_SubHead"><strong> WHERE ARE WE SHIPPING ? </strong></h2> <br> <br>
+
+      <a href="International_fr.html" class="btn-track">
+        <div class="--icon">
+          <div class="circle-inner"></div>
+          <div class="circle-outer"></div>
+          <svg width="24" height="24" viewBox="0 0 24 24" id="box">
+          <path d="M0 6L5 0H19L24 6V11H0V6Z" fill="#FDDDB3"/>
+          <path d="M0.835938 5L5 0H11.5L10 5H0.835938ZM12.5 0L14 5H23.1667L19 0H12.5ZM0 22.5V6H10V10.5L12 9.5L14 10.5V6H24V22.5C24 23.3284 23.3284 24 22.5 24H1.5C0.671573 24 0 23.3284 0 22.5Z" fill="#B39056"/>
+          <rect x="6" y="13" width="12" height="3" rx="0.25" fill="white"/>
+        </svg>
+        <svg width="10" height="14" viewBox="0 0 10 14" id="pin">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M5 14C6.5 14 10 8.5 10 5C10 1.5 7.76142 0 5 0C2.23858 0 0 1.5 0 5C0 8.5 3.5 14 5 14ZM4.99998 7.5C6.38069 7.5 7.49998 6.38071 7.49998 5C7.49998 3.61929 6.38069 2.5 4.99998 2.5C3.61927 2.5 2.49998 3.61929 2.49998 5C2.49998 6.38071 3.61927 7.5 4.99998 7.5Z" fill="#DE6D56"/>
+          </svg>
+        </div>
+        <div class="--text">INTERNATIONAL FREIGHT</div>
+      </a> 
+
+      <a href="Domestic_fr.html" class="btn-track">
+        <div class="--icon">
+          <div class="circle-inner"></div>
+          <div class="circle-outer"></div>
+          <svg width="24" height="24" viewBox="0 0 24 24" id="box">
+          <path d="M0 6L5 0H19L24 6V11H0V6Z" fill="#FDDDB3"/>
+          <path d="M0.835938 5L5 0H11.5L10 5H0.835938ZM12.5 0L14 5H23.1667L19 0H12.5ZM0 22.5V6H10V10.5L12 9.5L14 10.5V6H24V22.5C24 23.3284 23.3284 24 22.5 24H1.5C0.671573 24 0 23.3284 0 22.5Z" fill="#B39056"/>
+          <rect x="6" y="13" width="12" height="3" rx="0.25" fill="white"/>
+        </svg>
+        <svg width="10" height="14" viewBox="0 0 10 14" id="pin">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M5 14C6.5 14 10 8.5 10 5C10 1.5 7.76142 0 5 0C2.23858 0 0 1.5 0 5C0 8.5 3.5 14 5 14ZM4.99998 7.5C6.38069 7.5 7.49998 6.38071 7.49998 5C7.49998 3.61929 6.38069 2.5 4.99998 2.5C3.61927 2.5 2.49998 3.61929 2.49998 5C2.49998 6.38071 3.61927 7.5 4.99998 7.5Z" fill="#DE6D56"/>
+          </svg>
+        </div>
+        <div class="--text">DOMESTIC FREIGHT</div>
+      </a>
+      
+    </div>
+    </div>
+
+    <div id="AB_C"></div>
+
+  <div class="ABOUT">
+    <div class="About_head">
+      ABOUT CargoExp 
+    </div>
+  
+    <div class="about_hr"> <hr> </div> <br><br>
+
+   <p class="About_content">
+      <img class="img1" src="Image/Cargo_img_1.webp" alt="Logo">
+      
+      Connecting people with goods, services and ideas creates opportunities and improves lives.
+      Our supply chain platform and logistics operations bring flexibility, breadth, efficiency and 
+      innovation to our customer's supply chain and logistics. Our operations, infrastructure and technology
+      enable our customers to transact with us at low costs.
+      Fulfil your container shipping requirements with CargoExp Logistics and get instant shipping quote for your freights.
+      The platform provides best freight charges for international shipping as well as multiple secure payment
+      options for container booking along with advanced container tracking. 
+    </div>
+    <img class="img2" src="Image/Cargo_img_2.webp" alt="Logo">
+    <p class="About_content2">
+      
+      <span class="About_Bold"> RAPID.  RELIABLE. SECURE !!<br></span>
+      <b> "Time is of the essence"</b>, is the principle that forms the foundation of The Professional Couriers. That's why, we are always committed to being <b> "on time, every time".</b> <br><br>
+      <span class="About_Bold">Powered by Innovation, Powered by Technology !<br></span>
+      <b> 'Reach Us To Reach Them'</b> as we will provide you with the best-in-class, technology-enriched solutions for individuals and corporate clients.
+    </div> <br> <br>
+    <div class="about_hr"> <hr> </div> <br> 
+    <h1 class="Location"> Active Customers Around The World </h1>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <div id="regions_div" style="width: 900px; height: 500px;"></div>
+    <br><br><br>
+
+
+
+  
+
+    <footer class="footer">
+      <div>
+        <a href="index.html"><img src="Image/Cargo_Logo_Footer.png"  alt="Logo"  class="footer_logo"></a>
+        <h2 style="font-family:'Courier New', Courier, monospace ; ">CargoExp</h2>
+      </div>
+      <span class="footer_menu">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="Export_cargo.html"> CARGO TRACKINGS</a></li>
+          <li><a href="#AB_C">ABOUT CARGO</a></li>
+          <li><a href="About.html">ABOUT US</a></li>
+          <li><a href="Contact.html">CONTACT US</a></li>
+        </ul>
+        </span>  
+        
+    <div class="footer_convert">
+      SHIP YOUR FREIGHTS <br> <br>
+      <a href="Domestic_fr.html"> Domestic Freight <span class="material-symbols-outlined" style="font-size:16px;"> local_shipping </span> </a>  <br> <br>
+      <a href="International_fr.html"> International Freight <span class="material-symbols-outlined"> flight_takeoff </span> </a> 
+    </div>
+      <br> <br> <br> <br>
+    
+    <div class="footer_content">
+        <h3> Follow me on :  
+          <a href="https://www.linkedin.com/in/md-shariquek16"><img id="Social_icon" src="Image/linkedin_icon.png" alt="icon"></a>
+          <a href="https://github.com/account"><img id="Social_icon" src="Image/GitHub-image.png" alt="icon"></a>
+          <a href="https://twitter.com/MdSharu16K"><img id="Social_icon" src="Image/Twitter_icon.png" alt="icon"></a>
+          <a href="https://www.instagram.com/mdshariquek16/"><img id="Social_icon" src="Image/Instagram_icon.png" alt="icon"></a>
+        </h3>
+      </div>
+  
+      <br> <br> <br>
+      <div class="footer_mail" >
+        <i class="material-icons" style="font-size:14px;"> <span class="arrow"> email </span> : </i>  pshafeefaizan@gmail.com 
+      </div>
+    </footer>
+
+
+<script src="JavaScript/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,807 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Fredericka+the+Great&family=Orbitron&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    transition: all .2s linear;
+}
+header {
+    top: 0;
+    left: 0;
+    height: 6rem;
+    /* background: rgb(180, 212, 222); */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* box-shadow: 2px 2px 15px black; */
+}
+header .Profile img {
+    float: left;
+    height: 4.8rem;
+    margin-top: .5rem;
+    margin-left: 3.6rem;
+    object-fit: cover; 
+    border-radius: 10px;
+}
+
+.Profile ul {
+    padding: 0;
+    list-style: none;
+    /* background: #f2f2f2; */
+    float: right;
+    position: relative; 
+}
+.Profile ul li {
+    display: inline-block;
+    position: relative;
+    line-height: 21px;
+    text-align: left;
+    margin: 2.1rem 0.5rem;
+}
+.Profile ul li a {
+    display: block;
+    padding: 8px 15px;
+    color: #333;
+    text-decoration: none;
+    
+}
+.Profile ul li a:hover {
+    color: white;
+    background: #857f7f;
+    border-radius: 5px;
+    box-shadow: 4px 6px 5px rgb(236, 231, 231);
+}
+.Profile ul li ul.dropdown {
+    min-width: 100%; /* Set width of the dropdown */
+    background: #f2f2f2;
+    display: none;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+}
+.Profile ul li:hover ul.dropdown {
+    display: block;	/* Display the dropdown */
+    
+}
+.Profile ul li ul.dropdown li {
+    display: block;
+}
+
+#top_Btn {
+    display: none;
+    position: fixed;
+    bottom: 28px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    /* background-color: #cec2c2; */
+    border-radius: 75%;
+    color: black;
+    cursor: pointer;
+    padding: 10px;
+    /* border-radius: 4px; */
+}
+#top_Btn:hover {
+    background-color: #262626;
+    color: white;
+}
+.tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px
+}
+#top_Btn:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+
+
+
+
+/* Index (Home) */
+.main {
+    background-image: url(../Image/Cargo_BG_main.jpg);
+    background-size: cover;
+    /* opacity: 0.6; */
+    height: 620px;
+    box-shadow: 10px 2px 12px 3px black;
+
+}
+#main_heading {
+    color: black;
+    padding-top: 75px;
+    padding-left: 100px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+#Track_NO {
+    margin-top: 15px;
+    margin-left: 100px;
+    border-radius: 5px;
+    padding: 15px;
+    /* font-size: 14px; */
+    font-weight: bold;
+}
+.main_SubHead {
+    padding-left: 80px;
+    text-shadow: 1px 1px rgb(101, 97, 97);
+}
+
+
+
+.btn-track {
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 8px 20px -6px rgba(0,0,0,0.3);    
+    border-radius: 8px;
+    transition: all 0.1s ease;
+    box-sizing: border-box;
+    /* margin-left: 10px; */
+    
+    font-family: 'Inter', sans-serif;
+
+}
+.btn-track .--icon {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: rgb(194, 228, 239);
+    float: left;
+    box-shadow: 0px 2px 2px 2px black;
+    margin-left: 80px;
+}
+.btn-track .--icon:hover {
+    box-shadow: 0px 3px 3px 3px black;
+}
+.btn-track .--icon #box {
+    position: absolute;
+    top: 17px;
+    left: 18px;
+    transition: all 0.2s ease;
+  }
+  .btn-track .--icon #pin {
+    position: absolute;
+    top: 0px;
+    left: 25px;
+    opacity: 0;
+    transition: all 0.2s ease;
+  }
+  .btn-track .--icon .circle-inner {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.9);
+    margin: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    transform: scale(0);
+    transition: all 0.3s ease;
+  }
+  .btn-track .--icon .circle-outer {
+    position: absolute;
+    margin: 4px;
+    width: 52px;
+    height: 52px;
+    border-radius: 26px;
+    background: rgba(255,255,255,0.5);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    transform: scale(0);
+    transition: all 0.3s ease;
+  }
+  .btn-track .--text {
+    float: left;
+    color: #000;
+    white-space:  nowrap;
+    line-height: 20px;
+    height: 60px;
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: white;
+    box-sizing: border-box;
+    color: black;
+    font-weight: bold;
+    border: 1px solid black;
+    box-shadow: 0px 2px 2px 2px black;
+  }
+  .btn-track .--text:hover {
+      background-color: rgb(110, 196, 225); 
+      box-shadow: 0px 3px 3px 3px black;
+  }
+  .btn-track:hover .--icon #box {
+    transform: translateY(9px) scale(0.83333);
+  }
+  .btn-track:hover .--icon #pin {
+    transform: translateY(11px);
+    opacity: 1;
+    transition-delay: 0.15s;
+  }
+  .btn-track:hover .--icon .circle-inner {
+    transform: scale(1);
+    transition-delay: 0.2s;
+  }
+  .btn-track:hover .--icon .circle-outer {
+    transform: scale(1);
+    transition-delay: 0.25s;
+  }
+  .btn-track:hover .--text {
+    color: #000;
+  }
+  .btn-track:active {
+    transform: translateY(1px);
+  }
+  
+
+
+
+.Track_Con {
+    padding-top: 120px;
+    padding-left: 75px;
+}
+.Track_Num {
+    padding-left: 100px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+.Track_Btn {
+    margin-left: -100px;
+    padding: 11px;
+    color: black;
+    border: 2px solid black;
+    border-radius: 0px 0px 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    font-size: 17px;
+    /* box-shadow: 2px 2px black; */
+    text-decoration: none;
+    text-decoration-line: none;
+}
+.Track_Btn:hover {
+    background-color: rgb(110, 196, 225);
+    color: white;
+    box-shadow: 2px 2px black;
+}
+
+
+
+
+
+/* International and Domestic Freight */
+.fieldset_1  {
+    margin-left: 140px;
+    width: 370px;
+    border-radius: 5px;
+    padding: 10px;
+    float: left;
+    border: 2px solid black;
+}
+
+#From_details {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+#From_details2 {
+    float: right;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+#To_details2 {
+    float: right;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+.fieldset_2 {
+    float: right; 
+    margin-right: 120px;
+    width: 370px;
+    border-radius: 5px;
+    padding: 10px;
+    border: 2px solid black;
+}
+.fieldset_3 {
+    margin-left: 140px;
+    margin-top: 35px;
+    width: 370px;
+    border-radius: 5px;
+    padding: 10px;
+    float: left;
+    border: 2px solid black;
+}
+#Date_details {
+    padding: 9.2px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.fieldset_4 {
+    float: right; 
+    margin-right: 120px;
+    width: 370px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 35px;
+    border: 2px solid black;
+}
+#Commodity_details {
+    padding: 10px;
+    border-radius: 5px;
+}
+.Freight { 
+    position: relative; 
+    height: 145vh;
+    width: 100%;
+    background-image: url('../Image/Cargo_Freight_Logo.jpg');
+    background-size: cover;
+    box-shadow: 2px 2px 6px 6px black;
+}
+
+.Freight::before {
+    /* content: ""; */
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(245, 241, 247, 0.63);
+}
+.Freight #head_1 {
+    padding-top: 40px;
+    padding-left: 100px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+
+.emp {
+    height: 100px;
+}
+.demo {
+    width: 85%;
+    margin: auto;
+    height: 670px;
+    background: #ddd;
+    box-shadow: 6px 6px 16px black;
+    top: 20%;
+}
+
+.MainHead_Fr {
+    text-align: center;
+    padding-top: 25px;
+    text-shadow: 2px 3px rgb(148, 145, 145);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+
+.Freight #head_2 {
+    padding-left: 100px;
+    font-weight: bold;
+    padding-top: 210px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+.fieldset_5 {
+    margin-left: 140px;
+    margin-top: 17px;
+    width: 80px;
+    border-radius: 5px;
+    padding: 10px;
+    float: left;
+    border: 2px solid black;
+}
+#quantity_details {
+    width: 35px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.fieldset_6 {
+    float: right; 
+    margin-right: 535px;
+    width: 240px;
+    border-radius: 5px;
+    padding: 10px;
+    border: 2px solid black;
+}
+.fieldset_7 {
+    float: right; 
+    margin-right: 365px;
+    width: 120px;
+    margin-top: -79px;
+    border-radius: 5px;
+    padding: 9.1px;
+    border: 2px solid black;
+}
+#Weight_details {
+    width: 50px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.fieldset_8 {
+    float: right; 
+    margin-right: 120px;
+    margin-top: -79px;
+    width: 190px;
+    border-radius: 5px;
+    padding: 9.1px;
+    border: 2px solid black;
+}
+#Measurement_details {
+    width: 75px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Submit_Btn {
+    padding: 10px 20px;
+    font-size: 22px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-left: 250px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    box-shadow: 2px 2px black;
+}
+.Submit_Btn:hover {
+    color: white;
+    background-color: green;
+    box-shadow: 0px 0px black;
+}
+
+
+
+/* About */
+.About_head {
+    color: darkgrey;
+    white-space: nowrap;
+    text-align: center;
+    align-items: center;
+    padding-top: 60px;
+    font-size: 2.5em;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-shadow: 1px 1px 0 black, 1px 2px 0 grey, 1px 3px 0 grey, 1px 4px 0 lightblue,
+      1px 5px 0 black, 1px 6px 0 grey, 1px 7px 0 grey, 1px 8px 0 lightblue,
+      5px 13px 15px black;
+}
+.about_hr {
+    padding-top: 2%;
+    max-width: 660px;
+    margin: auto;
+    color: #000;
+}
+.About_content {
+    /* border: 2px solid black; */
+    overflow: auto;
+    padding: 60px;
+    font-size: 22px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+.img1 {
+    float: right;
+    width: 350px;
+    height: 200px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px black;
+}
+.About_content2 {
+    overflow: auto;
+    padding-left: 60px;
+    font-size: 22px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+.img2 {
+    float: left;
+    width: 350px;
+    height: 200px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px black;
+    margin-left: 60px;
+}
+.About_Bold {
+    font-weight: bold;
+    color: blue;
+}
+
+.Location {
+    margin: 60px;
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+#regions_div {
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+
+
+
+/* SHIP  */
+.Freight_ship { 
+    /* position: relative;  */
+    margin-top: 400px;
+    height: 165vh;
+    width: 100%;
+    /* background-image: url('../Image/Freight_BG2.jpg'); */
+    background-size: cover;
+    /* box-shadow: 2px 2px 6px 4px black; */
+}
+.Freight_ship::before {
+    /* content: ""; */
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(245, 241, 247, 0.63);
+}
+.Freight_ship #head_1_ship {
+    padding-top: 40px;
+    padding-left: 100px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+
+.emp_ship {
+    height: 100px;
+}
+.demo_ship {
+    width: 85%;
+    margin: auto;
+    height: 670px;
+    background: #ddd;
+    box-shadow: 4px 6px 6px 6px black;
+    top: 20%;
+}
+
+.MainHead_Fr_ship {
+    text-align: center;
+    padding-top: 20px;
+    text-shadow: 2px 3px rgb(148, 145, 145);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+.Freight_ship #head_2 {
+    padding-left: 100px;
+    font-weight: bold;
+    padding-top: 210px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+
+
+
+/* About US */
+.AboutUs {
+    background-image: url(../Image/Cargo_About_bg.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 860px;
+    opacity: .3;
+    z-index: -1;
+    margin-top: -150px;
+}
+.AboutUS_head {
+    color: darkgrey;
+    white-space: nowrap;
+    text-align: center;
+    align-items: center;
+    padding-top: 60px;
+    font-size: 2.5em;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-shadow: 1px 1px 0 black, 1px 2px 0 black, 1px 3px 0 black, 1px 4px 0 black,
+      1px 5px 0 black, 1px 6px 0 black, 1px 7px 0 black, 1px 8px 0 black,
+      5px 13px 15px black;
+}
+.About_Don {
+    margin: 23px;
+    border: 2px solid black;
+    width: 350px;
+    height: 580px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px black;
+    background-color: black;
+    color: white;
+    float: left;
+    padding: 10px;
+}
+.About_Zaid {
+    float: right;
+    margin: 23px;
+    border: 2px solid black;
+    width: 350px;
+    height: 580px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px black;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+.About_Sharu {
+    float: right;
+    margin: 23px;
+    border: 2px solid black;
+    width: 350px;
+    height: 580px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px black;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+.MyName {
+    font-size: 24px;
+    color: wheat;
+    text-shadow: 2px 2px 4px rgb(19, 18, 18);
+}
+.logo {
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 2;
+    margin-left: 90px;
+}
+.About_brief {
+    font-size: 18px;
+    font: 1em sans-serif;
+}
+.About_role {
+    font-size: 1.3em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px gray;
+}
+
+
+
+
+
+/* Export_Cargo */
+.Track_Con_Exp {
+    padding-top: 50px;
+    /* padding-left: 5px; */
+}
+
+
+
+
+/* Tracking Details */
+#Track_Page {
+    width: 1000px;
+    height: 500px;
+    /* border: 2px solid black; */
+    box-shadow: 4px 4px 8px 6px black;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 70px;
+    background-color: white;
+}
+#Track_Page h2 {
+    text-align: center;
+    padding-top: 50px;
+    font-family:'Courier New', Courier, monospace;
+}
+#Track_Page span {
+    color: red;
+}
+#Track_Page p {
+    font-family: 'Libre Barcode 39';
+    font-size: 62px;
+    padding-top: 30px;
+    text-align: center;
+    
+}
+#TrackDesc {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    padding-left: 100px;
+}
+#BarCode_Desc {
+    text-align: center;
+
+}
+
+
+
+
+/* FOOTER */
+.footer {
+    height: 285px;
+    background-color: #262626;
+    box-shadow: 0px 0px 10px black;
+}
+.footer_menu {
+    float: right;
+    padding: 0px 75px;
+}
+.footer_menu li {
+    /* float: right; */
+    padding: 6px; 
+}
+.footer_menu a {
+    text-decoration: none;
+    color: wheat;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.footer_menu li :hover {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.footer_content {
+    float: left;
+    color: #cec2c2;
+    padding: 0px 50px;
+    font-size: 20px;
+}
+.footer_content h3 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.footer_logo {
+    float: left;
+    height: 90px;
+    padding: 8px;
+    padding-top: 16px ;
+    padding-left: 50px;
+   
+}
+footer h2 {
+    text-decoration: none;
+    font-family: 'Fredericka the Great', cursive;
+    text-shadow: none;
+    letter-spacing: 3px;
+    padding-top: 45px;
+    color: wheat;
+}
+.footer_convert {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    float: right;
+    padding: 10px 20px;
+    color: wheat;
+}
+.footer_convert a {
+    text-decoration: none;
+    color: white;
+}
+.footer_convert a:hover {
+    color: wheat;
+    letter-spacing: 1.3px;
+}
+
+#Social_icon {
+    width: 22px;
+    padding: 0px 10px;
+    /* margin-top: 15px; */
+    border-radius: 50%;
+}
+#Social_icon:hover {
+    opacity: 0.5;
+}
+.footer_mail {
+    float: left;
+    color: white;
+    margin-left: 50px;
+    font-size: 18px;
+    letter-spacing: 1.3px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    column-rule-style: solid;
+    columns: 3;
+    width: 780px;
+    overflow: hidden;
+}

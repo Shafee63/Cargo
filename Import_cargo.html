@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Style.css">
+    <link rel="stylesheet" type="text/css" href="./SCSS/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="shortcut icon" href="Image/Web_Icon_off.png" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/8d688aa403.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="shortcut icon" href="Image/Cargo_LOGO.png"  type="image/x-icon">
+    <title> Cargo Management System </title>
+</head>
+<body>
+  <header>
+    <div class="Profile">
+      <a href="index.html"><img src="Image/Cargo_LOGO.png"  alt="Logo"></a>
+        <nav>
+          <ul>
+
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="Import_cargo.html">TRACK</a></li>
+            <li><a href="Ship.html">SHIP</a></li>
+
+            <!-- <li><a href="index.html">CARGO OPERATIONS ▼  </a>
+              <ul class="dropdown">
+                <li><a href="Charges_Calc.html">Charges Calculation</a></li>
+                <li><a href="Online_Cargo_Proc.html">Online Cargo Procedure</a></li>
+                <li><a href="Cargo_Tariff.html">Cargo Tariff</a></li>
+            </ul>
+          </li> -->
+            <!-- <li><a href="index.html"> &nbsp; CARGO TRACKINGS ▼ </a>
+              <ul class="dropdown">
+                <li><a href="Export_cargo.html">Export Cargo Tracking</a></li>
+                <li><a href="Import_cargo.html">Import Cargo Tracking</a></li>
+            </ul>
+            </li> -->
+            
+            <li><a href="Contact.html">CONTACT US</a></li>
+            <li><a href="About.html">ABOUT US</a></li>
+          </ul>
+      </nav>
+      </div>
+
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <!-- <i class="fa fa-bars"></i> -->
+      </a>
+</header>
+
+
+
+<script src="https://codepen.io/shshaw/pen/QmZYMG.js"></script>
+<div class="html">
+<div class="body">
+<div class="te">
+    <h1 class="Ship_Head">
+      TRACK YOUR IMPORTING FREIGHT'S
+    </h1>
+    <p class="Ship_Content">
+      <b> CargoExp </b> makes ease to ship any kind of freights to any corner of the world and can track your
+       freight with entire information of your particular freights around the world.
+       We provide reliable and rapid delivery with an ensured security for International Services with preferrable charges to our beloved customers.  
+       Just track your freights by entering your tracking numbers or tracking id's below.
+       <div class="Track_Con_Exp">
+        <h2 class="Track_Num">Track Your Shipment's  </h2>
+        <input type="text" name="Tracking_Num" id="Track_NO" size="80" placeholder="Enter Your Tracking Number's or Id's">
+        <button class="Track_Btn" onclick="TrackFunc(), TrackNumb()">  TRACK ▶ </button>
+      </div> <br>
+    </p>
+</div>
+<div id="app">
+  <div class="papers" style="--total: 5">
+    
+    <div class="paper -rogue" style="--i: 0">
+      <div class="segment">
+        <div class="segment">
+          <div class="segment">
+            <div class="segment">
+              <div class="segment"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="paper" style="--i: 1">
+      <div class="segment">
+        <div class="segment">
+          <div class="segment">
+            <div class="segment">
+              <div class="segment"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="paper" style="--i: 2">
+      <div class="segment">
+        <div class="segment">
+          <div class="segment">
+            <div class="segment">
+              <div class="segment"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+    <div class="paper" style="--i: 3">
+      <div class="segment">
+        <div class="segment">
+          <div class="segment">
+            <div class="segment">
+              <div class="segment"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="paper" style="--i: 4">
+      <div class="segment">
+        <div class="segment">
+          <div class="segment">
+            <div class="segment">
+              <div class="segment"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="shadow">
+    <div class="paper-shadow" style="--i: 0"></div>
+    <div class="paper-shadow" style="--i: 1"></div>
+    <div class="paper-shadow" style="--i: 2"></div>
+    <div class="paper-shadow" style="--i: 3"></div>
+    <div class="paper-shadow" style="--i: 4"></div>
+  </div>
+</div>
+</div>
+</div>
+
+<script src="JavaScript/main.js"></script>
+
+</body>
+</html>
